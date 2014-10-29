@@ -72,7 +72,7 @@
     ];
   });
 
-  module.provider('Intercom', function() {
+  module.provider('intercom', function() {
 
     this.$get = ['IntercomService', 'IntercomSettings', '$q',
       function(IntercomService, IntercomSettings, $q) {
