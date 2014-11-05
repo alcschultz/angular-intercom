@@ -6,8 +6,9 @@
   module.value('IntercomSettings', {});
 
   module.provider('IntercomService', function() {
-    var _asyncLoading = false;
-    var _scriptUrl = '//static.intercomcdn.com/intercom.v1.js';
+    var _asyncLoading = false,
+        protocol = 'https:' === document.location.protocol ? 'https:' : 'http:';
+    var _scriptUrl = protocol+'//static.intercomcdn.com/intercom.v1.js';
 
     this.asyncLoading = function(config) {
       _asyncLoading = config || _asyncLoading;
